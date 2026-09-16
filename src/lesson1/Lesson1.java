@@ -221,5 +221,24 @@ public class Lesson1 {
         System.out.println("За сутки машина произвела " + day + " штук бутылок");
         System.out.println("За 3 дня машина произвела " + threeDays + " штук бутылок");
         System.out.println("За месяц машина произвела " + month + " штук бутылок");
+        System.out.println();
+        System.out.println("Part 2, Lesson 1, Task 5");
+        /*
+        На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой.
+        На один класс уходит 2 банки белой и 4 банки коричневой краски.
+        Сколько банок каждой краски было куплено?
+        Выведите результат задачи в консоль в формате:
+        «В школе, где … классов, нужно … банок белой краски и … банок коричневой краски».
+         */
+
+        int totalPaint = 120;
+        int white = 2;
+        int brown = 4;
+        int classes = totalPaint / (white + brown);
+        int totalWhite = classes * white;
+        int totalBrown = classes * brown;
+        System.out.println("В  школе, где " + classes +" классов, нужно " + totalWhite + " банок белой краски и "
+                + totalBrown + " банок коричневой краски");
+
     }
 }
