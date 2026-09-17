@@ -110,5 +110,48 @@ public class Lesson2 {
             System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе " +
                     "без сопровождения взрослого");
         }
+        System.out.println();
+        System.out.println("Part 1, Lesson 2, Task 6");
+        /*
+        Вместимость одного вагона поезда — 102 человека. Вагон рассчитан на 60 сидячих мест,
+        все остальные — стоячие.
+        С помощью условного оператора и конструкции else напишите программу, которая выводит
+        в консоль сообщение о том, есть ли место в вагоне, сидячее или стоячее,
+        или вагон уже полностью забит.
+         */
+
+        int totalPlaces = 102;
+        int seats = 60;
+        int occupied = 105;
+        if (occupied < 0){
+            System.out.println("Количество занятых мест не может быть отрицательным");
+        } else if (occupied < seats){
+            System.out.println("В вагоне есть сидячие места");
+        } else if (occupied < totalPlaces) {
+            System.out.println("В вагоне есть только стоячие места");
+        } else {
+            System.out.println("В вагоне нет свободных мест");
+        }
+
+        System.out.println();
+        System.out.println("Part 1, Lesson 2, Task 7");
+        /*
+        Даны три числа:
+        int one;
+        int two;
+        int three;
+        С помощью условного оператора и конструкции else напишите программу,
+        которая вычисляет, какое из трех чисел бо́льшее, и выводит результат в консоль.
+         */
+        int one = 5;
+        int two = 5;
+        int three = 3;
+        if (three >= two && three >= one){
+            System.out.println("Наибольшее из трёх чисел " + three);
+        }else if (one >= two && one >= three){
+            System.out.println("Наибольшее из трёх чисел " + one);
+        } else if (two >= one && two >= three) {
+            System.out.println("Наибольшее из трёх чисел " + two);
+        }
     }
 }
