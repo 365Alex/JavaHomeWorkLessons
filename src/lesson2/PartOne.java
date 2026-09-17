@@ -1,6 +1,6 @@
 package lesson2;
 
-public class Lesson2 {
+public class PartOne {
     public static void main(String[] args){
         System.out.println("Part 1, Lesson 2, Task 1");
         /*
