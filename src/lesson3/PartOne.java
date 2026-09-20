@@ -102,6 +102,7 @@ public class PartOne {
          2*2=4
          2*3=6
          2*4=8
+         ...
          */
         for (int i = 1; i <=10; i++) {
             System.out.println("2 * " + i + " = " + i*2);
