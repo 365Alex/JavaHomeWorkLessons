@@ -160,15 +160,21 @@ public class PartTwo {
         2054
          */
         int startYear = 2026;
-        int firstYear = startYear - 200;
-        int cometYear = firstYear / 79 * 79;
-        int endYear = startYear + 100;
-        if (cometYear < firstYear) {
-            cometYear += 79;
+        int firstYear = startYear - 200;        // 1826
+        int cometYear = firstYear / 79 * 79;    // 1817
+        int endYear = startYear + 100;          // 2126
+        /*
+        Этот if нужен, потому что firstYear / 79 * 79 даёт последний год кометы ≤ firstYear,
+        а не первый год кометы ≥ firstYear. Разница проявляется именно тогда, когда firstYear
+        не делится на 79 нацело.
+         */
+        if (cometYear < firstYear) {      // 1817 < 1826 → истина
+            cometYear += 79;              // cometYear = 1896
         }
-        while (cometYear < endYear){
-            System.out.println(cometYear);
-            cometYear+=79;
+        // Выводим все годы кометы в периоде
+        while (cometYear < endYear){            // 1896 < 2126
+            System.out.println(cometYear);      // печатаем 1896
+            cometYear+=79;                      // 1975
         }
     }
 }
