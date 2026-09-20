@@ -161,6 +161,10 @@ public class PartTwo {
          */
         int startYear = 2026;
         int firstYear = startYear - 200;        // 1826
+        /*
+        Делим год отсчёта на 79 и умножаем обратно — получаем последний год кометы,
+        который был не позже года отсчёта
+         */
         int cometYear = firstYear / 79 * 79;    // 1817
         int endYear = startYear + 100;          // 2126
         /*
