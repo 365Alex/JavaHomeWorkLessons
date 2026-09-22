@@ -39,7 +39,7 @@ public class PartTwo {
         Важно: не допускается двойная вложенность (условный оператор внутри условного оператора).
          */
         int clientDeviceYear = 2015;
-        int yearDevice = 2015;
+        int yearDevice = 2012;
         if (yearDevice <= 1900){
             System.out.println("Год не может быть отрицательным, меньше или равным 1900 года");
         } else if (clientOS < 0 || clientOS > 1){
