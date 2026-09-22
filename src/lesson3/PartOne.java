@@ -1,7 +1,9 @@
 package lesson3;
 
+import java.io.IOException;
+
 public class PartOne {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         System.out.println("Lesson 3, Part 1, Task 1");
         /*
         С помощью цикла for выведите в консоль все целые числа от 1 до 10.
@@ -114,6 +116,33 @@ public class PartOne {
                 System.out.println(x + " * " + i + " = " + x * i);
             }
             System.out.println();
+        }
+        //ввод символов с клавиатуры
+        //игра угадай задуманную букву
+        System.out.println("Задумана буква между A и Z");
+        System.out.print("Попробуй её угадать: ");
+        char world, answer = 'J';
+        world = (char) System.in.read();
+        if (world == answer) System.out.println("***Правильно***");
+        else System.out.println("... Увы, не угадали");
+        System.out.println();
+        System.out.println("Цикл for с двумя переменными");
+        int f,g;
+        for (f = 0, g = 10; f < g; f++, g --){
+            System.out.println("f and g: " + f + " " + g);
+        }
+        System.out.println();
+        System.out.println("Для остановки цикла нужно нажмите клавишу A");
+        for (int i = 0; ; i++) {
+            char ch = (char) System.in.read();
+            if (ch == 'A') {
+                System.out.println("Цикл завершён");
+                break;
+            }
+            if (ch == '\n') {
+                continue;   // пропускаем Enter
+            }
+            System.out.println("Проход  #" + i);
         }
     }
 }
